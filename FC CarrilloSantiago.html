@@ -18,29 +18,34 @@
             this.getFullName = function() {
                 return console.log(`${nombre} ${apellido}`)
             }  
-            
             this.addMascota = function(mascota) {
                 mascotas.push(mascota)
             }
-
             this.getMascotas = function() {
                 return console.log(`${mascotas.length}`)
             }
-
+            this.getBooks() = function() {
+                let arregloNombres = [];
+                for(i = 0; i < libros.length; i++) {
+                    arregloNombres.push(libros[i].nombre)
+                }
+                return arregloNombres;
+            }
             this.addBook = function(book, autor) {
                 let libro = {nombre: book, autor: autor}
                 libros.push(libro);
             }
-        }         
-        
 
-        let librosArray = {nombre:'El Aleph', autor:'Jorge Luis Borges'};
+        }         
+    
+        let librosArray = [{nombre:'El Aleph', autor:'Jorge Luis Borges'}];
         let mascotasArray = ['perro', 'gato'];
         let user = new Usuario('Santiago', 'Carrillo', librosArray, mascotasArray);
         user.getFullName();
         user.addMascota('loro');
         user.getMascotas();
-        user.addBook('El Aleph', 'Jorge Luis Borges');
+        user.addBook('Ficciones', 'Jorge Luis Borges');
+        user.getBooks();
     </script>
 </body>
 </html>
