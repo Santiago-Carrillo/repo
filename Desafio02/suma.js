@@ -7,7 +7,7 @@ class Suma {
         this.resultado = a + b;
     }
     ver() {
-        return this.resultado;
+        return console.log(this.resultado);
     }
 }
 exports.Suma = Suma;

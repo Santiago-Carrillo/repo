@@ -7,6 +7,6 @@ export class Suma {
     }
     
     public ver() {
-        return this.resultado;
+        return console.log(this.resultado);
     }
 }

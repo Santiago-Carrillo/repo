@@ -7,7 +7,7 @@ class Resta {
         this.resultado = a - b;
     }
     ver() {
-        return this.resultado;
+        return console.log(this.resultado);
     }
 }
 exports.Resta = Resta;
