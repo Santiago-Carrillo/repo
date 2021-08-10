@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp">
+    <label for="" id="texto"></label>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () =>{
+            let inp = document.querySelector("#inp");
+            let texto = document.querySelector("#texto");
+            const {Observable, fromEvent} = rxjs;
+            const {filter, map} = rxjs.operators;
+
+            const observable = fromEvent(inp, 'keyup');
+
+            observable.subscribe((e => {
+
+                setTimeout(() => {
+                    console.log("termino")
+                    observable.unsubscribe()
+                    
+                }, 30000)
+    
+                let str = e.target.value;
+                console.log('keyup:', e.target.value);
+                texto.innerText = str.split('').reverse().join('');
+                // if(e.str == 'error'){
+                    
+
+                // }
+            }))
+        })
+    </script>
+    <script src="https://unpkg.com/rxjs@^7/dist/bundles/rxjs.umd.min.js"></script>
+</body>
+</html>
