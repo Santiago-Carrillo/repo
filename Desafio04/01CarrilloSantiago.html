@@ -18,7 +18,7 @@
             const {filter, map} = rxjs.operators;
 
             const observable = fromEvent(inp, 'keyup');
-
+            
             observable.subscribe((e => {
 
                 setTimeout(() => {
@@ -30,10 +30,6 @@
                 let str = e.target.value;
                 console.log('keyup:', e.target.value);
                 texto.innerText = str.split('').reverse().join('');
-                // if(e.str == 'error'){
-                    
-
-                // }
             }))
         })
     </script>
