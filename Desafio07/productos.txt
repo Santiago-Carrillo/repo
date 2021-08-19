@@ -1,0 +1,26 @@
+[
+	{
+		"title": "cafe",
+		"price": "400$",
+		"thumbnail": "url de la foto",
+		"id": 0
+	},
+	{
+		"title": "cafe1",
+		"price": "400$",
+		"thumbnail": "url de la foto",
+		"id": 1
+	},
+	{
+		"title": "cafe2",
+		"price": "400$",
+		"thumbnail": "url de la foto",
+		"id": 2
+	},
+	{
+		"title": "cafe3",
+		"price": "400$",
+		"thumbnail": "url de la foto",
+		"id": 3
+	}
+]
